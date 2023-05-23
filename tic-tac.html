@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .grid-box{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            width: 0px;
+            place-items: center;
+         }
+         .grid{
+            width: 50px ;
+            height: 50px;
+            border: dashed 1px black;
+            font-family: cursive;
+            font-size: 25px;
+            text-align: center;
+         }
+    </style>
+</head>
+<body>
+   <div class="grid-box">
+       <div class="grid" onclick="tictac(0)"></div>
+       <div class="grid" onclick="tictac(1)"></div>
+       <div class="grid" onclick="tictac(2)"></div>
+       <div class="grid" onclick="tictac(3)"></div>
+       <div class="grid" onclick="tictac(4)"></div>
+       <div class="grid" onclick="tictac(5)"></div>
+       <div class="grid" onclick="tictac(6)"></div>
+       <div class="grid" onclick="tictac(7)"></div>
+       <div class="grid" id="submit" onclick="tictac(8)"></div>
+    </div>
+   
+
+    <script>
+      var box = document.getElementsByClassName("grid");
+      var value = false;
+       
+       function tictac(m){
+        if(value == true){
+          box[m].innerHTML = "0";
+          value = false; 
+        }else{
+          box[m].innerHTML = "x";
+          value = true;
+        }
+       }
+      function resetbtn () {
+         window.location.reload();
+      } 
+      document.getElementById("submit").addEventListener("dblclick" , resetbtn);
+    </script>
+
+</body>
+</html>  
