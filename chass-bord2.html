@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0%;
+            margin: 0%;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(41, 41, 41);
+        }
+
+        .bord {
+            width: 500px;
+            height: 500px;
+            border: 1px solid white;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            background-color: white;
+            width: 62px;
+            height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bord" class="bord"></div>
+    <input type="number" id="inp1" placeholder="add value row">&nbsp; &nbsp;
+    <input type="number" id="inp2" placeholder="add value columns">&nbsp;&nbsp;&nbsp;&nbsp;<br>
+    <button id="submit">click me!</button>
+
+    <script>
+
+
+        let bord = document.getElementById("bord");
+
+        for (let rows = 0; rows < 8; rows++) {
+            let bgcolor;
+            let boxstart = rows % 2 === 0 ? true : false;
+
+             for (let columns = 0; columns < 8; columns++) {
+
+                if (boxstart){
+                    bgcolor = columns % 2 === 0 ? "white" : "black"
+                }
+                else(   bgcolor = columns % 2 !== 0 ? "white" : "black");
+
+
+                let box = document.createElement("div");
+                box.classList.add("box");
+                box.style.backgroundColor = bgcolor;
+                bord.append(box);
+
+
+            }
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
