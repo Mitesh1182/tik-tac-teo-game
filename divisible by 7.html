@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <input type="text" id="inp1">
+   <input type="text" id="inp2">
+   <button  onclick = "divisibleByseven()">submit</button>
+   <p id="output"></p>
+   
+   <script>
+    const divisibleByseven = () => {
+
+        let M = document.getElementById("inp1").value;
+        let N = document.getElementById("inp2").value;
+        let value = 0;
+        
+        for (let i = M; i < N; i++ ){
+            if(i % 7 == 0){
+                value++;
+            }
+        }
+        document.getElementById("output").innerHTML = value;
+    }
+        </script>
+
+
+
+
+
+
+</body>
+</html>
