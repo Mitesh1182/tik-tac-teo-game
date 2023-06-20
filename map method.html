@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+   <script>
+       const users = [
+        {
+            Id : 1,
+            name : "user 1", 
+            city : "vadodra",
+        },
+        {
+            Id : 2,
+            name : "user 2",
+            city : "vadodra",
+
+        },
+        {
+            Id : 3,
+            name : 'user 3',
+            city : "vadodra",
+
+        }
+       ];
+
+       const userdetailes = users.map((currentValue) => {
+        delete currentValue.name;
+        if (currentValue.Id % 2 === 0) {
+            return {...currentValue, gender : "male"};
+        }
+        else {
+            return {...currentValue, gender : "female"};
+
+        }
+    });   
+    console.log(userdetailes);
+
+   </script>
+
+
+</body>
+</html>
