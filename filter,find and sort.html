@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let user = [
+        {
+            id : 2,
+            name : "user 1",
+            age: 23,
+            city : "ahemdabad"
+        },
+        {
+            id : 3,
+            name : "user 1",
+            age: 26,
+            city : "vadodra"
+        },
+        {
+            id : 4,
+            name : "user 1",
+            age: 25,
+            city : "vadodra"
+        },
+    ]
+
+    let filterId3 = user.filter((currentValue) => currentValue.id === 3);
+    
+    let findCity = user.find((currentValue) => currentValue.city === "vadodra");
+    
+    let sort = user.sort((a,b)  => a.id-b.id);
+
+    console.log(filterId3);
+    console.log(findCity);
+    console.log(sort);
+    </script>
+</body>
+</html> 
